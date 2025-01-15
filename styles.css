@@ -868,13 +868,8 @@ footer {
     width: 100%;
     padding: 1rem 0;
     margin-top: 3rem;
-    border-radius: 0.8rem;
-    background: linear-gradient(87.43deg, #090EDA 8.8%, #27AACD 84.38%);
-    border: 1px solid;
-    border-image-source: linear-gradient(90deg, #090EDA 0%, #27AACD 100%);
     box-shadow: 0px 4px 4px 0px #FFFFFF33 inset;
     color: #fff;
-
 }
 
 #data-protection-content-right {
@@ -1087,10 +1082,12 @@ footer {
     #phoneContainer img {
         width: 100%;
     }
+
     .review-card {
         width: 12rem;
 
     }
+
     #left-card {
         top: 55%;
         right: 62%;
