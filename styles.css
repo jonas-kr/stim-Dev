@@ -48,7 +48,7 @@ header a {
 }
 
 #logo {
-    width: 11.2rem;
+    width: 11.5rem;
 }
 
 header nav {
@@ -392,10 +392,9 @@ header button {
 .blue-button::after {
     content: "";
     position: absolute;
-    height: 101%;
-    width: 101%;
+    height: 102%;
+    width: 102%;
     border-radius: 1000px;
-    border: 1px solid transparent;
     background-image: linear-gradient(180deg, #090EDA 0%, #27AACD 100%);
     z-index: -1;
 }
@@ -527,9 +526,6 @@ header button {
     height: 102%;
     width: 101%;
     border-radius: 0.8rem;
-    border: 1px solid transparent;
-    border: 1px solid;
-
     background-image: linear-gradient(90deg, #7DD449 0%, #18A0FB 100%);
     z-index: -1;
 }
@@ -584,6 +580,7 @@ header button {
     justify-content: center;
     align-items: center;
 }
+
 .refrences-button::after {
     content: "";
     position: absolute;
@@ -634,7 +631,7 @@ header button {
     width: 85%;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -926,13 +923,13 @@ footer {
 
 @media (max-width: 1200px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 768px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     header {
@@ -1022,7 +1019,8 @@ footer {
     }
 
     #request-cards {
-        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     #top-footer {
@@ -1046,22 +1044,26 @@ footer {
 
 @media (max-width: 480px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #phoneContainer {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 70%;
     }
 
     #phoneContainer img {
-        width: 80%;
+        width: 70%;
+    }
+
+    #left-card {
+        right: 62%;
     }
 
     #right-card {
-        left: 65%;
+        left: 62%;
     }
 
     #services-bar {
