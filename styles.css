@@ -767,7 +767,10 @@ footer {
     html {
         font-size: 12px;
     }
+    header {
+        padding: 0.6rem 1.2rem;
 
+    }
     header nav,
     header button {
         display: none;
