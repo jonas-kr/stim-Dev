@@ -33,6 +33,11 @@ header {
     padding: 0.8rem 2.5rem;
     color: #CAD1E9;
 }
+header a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #logo {
     width: 12rem;
@@ -931,6 +936,9 @@ footer {
 
     #data-protection-content-left {
         padding: 0;
+    }
+    #data-protection {
+        padding: 4rem 1rem 5rem 1rem;
     }
 }
 
