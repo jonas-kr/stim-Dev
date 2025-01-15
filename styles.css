@@ -50,7 +50,31 @@ header nav a {
     color: #CAD1E9;
 }
 
+#menu-container {
+    border: 1px solid #CAC6DD;
+    border-radius: 0.8rem;
+}
+
+#menu-container a {
+    text-decoration: none;
+    color: #CAD1E9;
+}
+
 header button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    background-color: transparent;
+    color: #CAD1E9;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#menu-container button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +91,10 @@ header button {
 #menu-button {
     width: 3.5rem;
     height: 3.5rem;
+    display: none;
+}
+
+#menu-container {
     display: none;
 }
 
@@ -507,10 +535,12 @@ header button {
     text-align: center;
     margin-top: 1rem;
 }
-#refrences-line{
+
+#refrences-line {
     width: 60%;
-     margin: 3rem 0;
+    margin: 3rem 0;
 }
+
 #request-cards {
     width: 85%;
     margin: 2rem auto;
@@ -654,16 +684,21 @@ footer {
 }
 
 #data-protection {
-    background: rgba(14, 12, 21, 1) url('./assests/data-protection-bg.png') no-repeat;
+    background: url("./assests/bg.png") no-repeat center;
     background-size: cover;
+    backdrop-filter: blur(250px);
     margin-top: 4rem;
     padding: 7rem 0 8rem 0;
     border-radius: 1.5rem;
 }
 
 #data-protection-content {
-    padding: 7rem 0;
     display: flex;
+    padding: 5rem 0 8rem 0;
+}
+
+#data-protection-content li {
+    margin-top: 1rem;
 }
 
 #data-protection-content-left {
@@ -675,16 +710,49 @@ footer {
     color: #EDEFFC;
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 #data-protection-content-left p {
     color: #195A9B;
-    margin-top: 1.5rem;
+}
+
+#data-protection-content-left h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #EDEFFC;
+    margin: 3rem 0;
+}
+
+#data-protection-content-left ul {
+    color: #fff;
+}
+
+#data-protection-content-left li p {
+    color: #195A9B;
+}
+
+#data-protection-content-left li span {
+    color: #195A9B;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#data-protection-content-left button {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(87.43deg, #090EDA 8.8%, #27AACD 84.38%);
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #090EDA 0%, #27AACD 100%);
+    box-shadow: 0px 4px 4px 0px #FFFFFF33 inset;
+    color: #fff;
+
 }
 
 #data-protection-content-right {
     flex: 1;
-
 }
 
 #data-protection-content-right h3 {
@@ -767,10 +835,12 @@ footer {
     html {
         font-size: 12px;
     }
+
     header {
         padding: 0.6rem 1.2rem;
-
+        position: relative;
     }
+
     header nav,
     header button {
         display: none;
@@ -778,6 +848,25 @@ footer {
 
     #menu-button {
         display: inline;
+    }
+
+    #menu-button:hover #menu-container {
+        display: flex;
+    }
+
+    #menu-container {
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 10rem 0;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        z-index: 10;
+        background-color: #0F0B15;
+        width: 100%;
+        font-size: 1.5rem;
+
     }
 
     #hero {
@@ -803,36 +892,73 @@ footer {
     #services-buttons {
         justify-content: center;
     }
+
     #services-buttons button {
         height: 4rem;
         width: 12rem;
     }
-    
+
     .service {
         justify-content: center;
     }
+
     .rectangle,
     .circle {
         display: none;
     }
+
     .refrences-button {
         padding: 0.6rem 1.2rem;
     }
-    #refrences-line{
+
+    #refrences-line {
         width: 90%;
     }
+
     #request-cards {
         grid-template-columns: repeat(3, 1fr);
     }
+
     #top-footer {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    #data-protection-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #data-protection-content-left {
+        padding: 0;
     }
 }
 
 @media (max-width: 480px) {
     html {
         font-size: 10px;
+    }
+    #services-right img{
+        width: 80%;
+    }
+    #phoneContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    #phoneContainer img{
+        width: 80%;
+    }
+    #right-card {
+        left: 65%;
+    }
+    
+    #services-bar{
+        gap: 0.4rem;
+    }
+    #services-bar .blue-button{
+        padding: 0.5rem 1rem;
     }
 
 }
