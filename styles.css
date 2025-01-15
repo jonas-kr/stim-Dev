@@ -253,7 +253,6 @@ header button {
     width: 13rem;
     background-color: #F9F9F9;
     border-radius: 1rem;
-
     padding: 1rem;
     box-shadow: 0px 0px 4px 0px #00000040;
     display: flex;
@@ -1086,10 +1085,14 @@ footer {
     }
 
     #phoneContainer img {
-        width: 70%;
+        width: 100%;
     }
+    .review-card {
+        width: 12rem;
 
+    }
     #left-card {
+        top: 55%;
         right: 62%;
     }
 
