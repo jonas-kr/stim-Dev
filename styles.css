@@ -826,6 +826,7 @@ footer {
     }
     #top-footer {
         flex-direction: column;
+        gap: 2rem;
     }
 }
 
