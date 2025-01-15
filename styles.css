@@ -11,6 +11,8 @@
 
 button {
     cursor: pointer;
+    font-size: 0.9rem;
+
 }
 
 body {
@@ -387,6 +389,7 @@ header button {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .blue-button::after {
@@ -485,6 +488,7 @@ header button {
 #services-buttons button {
     height: 3.8rem;
     width: 11rem;
+
 }
 
 #services-buttons .left-button {
@@ -609,8 +613,8 @@ header button {
 #request {
     padding: 3.5rem 0 1rem 0;
     background: linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
-    border-bottom: 1px solid;
-    border-image-source: linear-gradient(266.19deg, rgba(16, 17, 49, 0.6) -4.37%, rgba(239, 239, 245, 0) 100.99%);
+    border: 1px solid #10113199;
+
     backdrop-filter: blur(16px);
     border-radius: 1.5rem;
 }
@@ -630,6 +634,8 @@ header button {
 #request-cards {
     width: 85%;
     margin: 2rem auto;
+    margin-bottom: 5rem;
+
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
@@ -661,24 +667,46 @@ header button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+}
+
+#i-know {
+    padding: 10rem 0;
 }
 
 #i-know-container {
     background: linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
-    border: 1.2px solid;
-    border-image-source: linear-gradient(266.19deg, rgba(16, 17, 49, 0.6) -4.37%, rgba(239, 239, 245, 0) 100.99%);
     backdrop-filter: blur(100px);
-    padding: 3rem;
-
+    border: 1px solid #10113199;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    border-radius: 1.5rem;
 }
 
 #i-know-content {
     background: linear-gradient(79.59deg, rgba(50, 51, 62, 0.16) 6.21%, rgba(83, 84, 108, 0.16) 98.02%);
     border: 1px solid;
     border-image-source: linear-gradient(266.19deg, rgba(39, 39, 52, 0.6) -4.37%, rgba(247, 247, 246, 0) 100.99%);
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    border-radius: 1.2rem;
 
+    position: relative;
+}
 
+#profil-pic {
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+}
+
+#i-know-content h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+#i-know-content p {
+    color: #CAC6DD;
+    margin-bottom: 2rem;
 }
 
 #last-section {
