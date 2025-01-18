@@ -1099,8 +1099,8 @@ footer {
     }
 
     .review-card {
-        width: 12rem;
-
+        width: 11rem;
+        padding: 0.5rem;
     }
 
     #left-card {
