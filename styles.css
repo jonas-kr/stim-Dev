@@ -379,9 +379,11 @@ header button {
     align-items: center;
     padding: 0.5rem 1rem;
 }
-#services-bar span{
+
+#services-bar span {
     cursor: pointer;
 }
+
 .blue-button {
     background: linear-gradient(87.43deg, #19599A 48.48%, rgba(63, 182, 211, 0.7) 84.38%);
     border-radius: 1000px;
@@ -1074,6 +1076,15 @@ footer {
         font-size: 12px;
     }
 
+    .wrapper {
+        padding: 1rem 2vw;
+    }
+
+    header {
+        margin: 1rem 2vw 0 2vw;
+
+    }
+
     #phoneContainer {
         display: flex;
         justify-content: center;
@@ -1100,7 +1111,8 @@ footer {
     }
 
     #services-bar {
-        gap: 0.4rem;
+        padding: 0.2rem;
+        gap: 0.1rem;
     }
 
     #services-bar .blue-button {
