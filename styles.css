@@ -1079,7 +1079,9 @@ footer {
     .wrapper {
         padding: 1rem 2vw;
     }
-
+    #secondPart {
+        padding: 8rem 2vw 0 2vw;
+    }
     header {
         margin: 1rem 2vw 0 2vw;
 
