@@ -379,7 +379,9 @@ header button {
     align-items: center;
     padding: 0.5rem 1rem;
 }
-
+#services-bar span{
+    cursor: pointer;
+}
 .blue-button {
     background: linear-gradient(87.43deg, #19599A 48.48%, rgba(63, 182, 211, 0.7) 84.38%);
     border-radius: 1000px;
