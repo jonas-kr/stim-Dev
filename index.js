@@ -1,4 +1,17 @@
 const scrollers = document.querySelectorAll(".scroller");
+const services = document.querySelectorAll("#services-bar span")
+
+console.log(services);
+
+services.forEach((service) => {
+  service.addEventListener("click", () => {
+    services.forEach((s) => {
+      s.classList.remove("blue-button")
+    })
+    service.classList.add("blue-button")
+  })
+})
+
 
 // If a user hasn't opted in for recuded motion, then we add the animation
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
