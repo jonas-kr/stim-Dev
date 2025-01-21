@@ -1,7 +1,6 @@
 const scrollers = document.querySelectorAll(".scroller");
 const services = document.querySelectorAll("#services-bar span")
 
-console.log(services);
 
 services.forEach((service) => {
   service.addEventListener("click", () => {
