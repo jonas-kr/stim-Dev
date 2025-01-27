@@ -591,7 +591,9 @@ font-size: 1.3rem;
     padding: 6rem 0 0 0;
     background: url("./assests/bg.png") no-repeat center;
     background-size: cover;
-    backdrop-filter: blur(16px)
+    backdrop-filter: blur(16px);
+    position: relative;
+    
 }
 
 #refPlanet {
