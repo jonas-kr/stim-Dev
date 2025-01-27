@@ -101,23 +101,39 @@ header button::after {
     z-index: -1;
 }
 
-#menu-container button {
+#menu-container a{
+font-size: 1.3rem;
+}
+#header-button  {
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.8rem;
-    background-color: transparent;
+    gap: 0.6rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 0.9rem;
     color: #CAD1E9;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     cursor: pointer;
+    position: relative;
+    background-color: #0E0C15;
+    font-size: 1rem;
 }
 
 #menu-button {
     width: 3rem;
     height: 3rem;
+    display: none;
+}
+#close-button{
+    width: 3rem;
+    height: 3rem;
+}
+#menu-button.hidden {
+    display: none;
+}
+#close-button.hidden {
     display: none;
 }
 
@@ -1176,6 +1192,10 @@ footer {
     #request-cards {
         width: 95%;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    #arrow-container{
+        width: 90%;
+        margin: 0 auto;
     }
 
     #top-footer {
