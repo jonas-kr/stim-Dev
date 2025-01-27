@@ -447,7 +447,7 @@ font-size: 1.3rem;
 .blue-button::after {
     content: "";
     position: absolute;
-    height: 103%;
+    height: 104%;
     width: 101%;
     border-radius: 1000px;
     background-image: linear-gradient(180deg, #090EDA 0%, #27AACD 100%);
@@ -580,7 +580,7 @@ font-size: 1.3rem;
 .border-button::after {
     content: "";
     position: absolute;
-    height: 102%;
+    height: 104%;
     width: 101%;
     border-radius: 0.8rem;
     background-image: linear-gradient(90deg, #7DD449 0%, #18A0FB 100%);
