@@ -616,14 +616,21 @@ header button::after {
     display: flex;
     justify-content: center;
     align-items: end;
+    flex-wrap: wrap;
 }
 
 #projects-imgs img {
-    width: 100%;
+    width: 20%; /* 3 items per row */
+    height: auto;
+    cursor: pointer;
+}
+#projects-imgs img:hover {
+scale: 105%;
 }
 
 #secondPart {
     padding: 8rem 5vw 0 5vw;
+    z-index: -1;
 }
 
 #request {
@@ -690,28 +697,47 @@ header button::after {
 }
 
 #i-know-container {
-    background: linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
-    backdrop-filter: blur(100px);
+    background: transparent linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
+
+    backdrop-filter: blur(36px);
     border: 1px solid #10113199;
     padding: 3rem 2rem;
     margin-top: 3rem;
     border-radius: 1.5rem;
     position: relative;
 }
-#left-arrow,#right-arrow{
+
+#arrow-container {
+    background: transparent;
+    z-index: 1;
+    position: relative;
+}
+
+#left-arrow,
+#right-arrow {
     position: absolute;
     height: 2.5rem;
     width: 2.5rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: -5;
+    cursor: pointer;
 }
-#left-arrow{
-    left: -1rem;
+
+#right-arrow:hover,
+#left-arrow:hover {
+    z-index: 1;
+    transition: ease-in-out 0.1s;
 }
-#right-arrow{
-    right: -1rem;
+
+#left-arrow {
+    left: -1.5rem;
 }
+
+#right-arrow {
+    right: -1.5rem;
+}
+
 #i-know-content {
     background: linear-gradient(79.59deg, rgba(50, 51, 62, 0.16) 6.21%, rgba(83, 84, 108, 0.16) 98.02%);
     border: 1px solid;
