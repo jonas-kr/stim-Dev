@@ -14,8 +14,7 @@ button {
     font-size: 0.9rem;
 }
 button:hover{
-    box-shadow: 0px 0px 0.5rem 0px #ffffff66;
-    
+    box-shadow: 0px 0px 1rem -0.2rem #9F64EF66;
 }
 body {
     width: 100%;
@@ -565,7 +564,7 @@ header button::after {
 
 }    
 #services-buttons .left-button:hover{
-    box-shadow: 0px 0 0.5rem 0px #ffffff66;
+    box-shadow: 0px 0px 1rem -0.2rem #9F64EF66;
 }
 
 
