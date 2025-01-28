@@ -12,9 +12,11 @@
 button {
     cursor: pointer;
     font-size: 0.9rem;
-
 }
-
+button:hover{
+    box-shadow: 0px 0px 0.5rem 0px #ffffff66;
+    
+}
 body {
     width: 100%;
     background: url('./assests/background.svg') repeat;
@@ -101,10 +103,11 @@ header button::after {
     z-index: -1;
 }
 
-#menu-container a{
-font-size: 1.3rem;
+#menu-container a {
+    font-size: 1.3rem;
 }
-#header-button  {
+
+#header-button {
     border: none;
     display: flex;
     justify-content: center;
@@ -126,13 +129,16 @@ font-size: 1.3rem;
     height: 3rem;
     display: none;
 }
-#close-button{
+
+#close-button {
     width: 3rem;
     height: 3rem;
 }
+
 #menu-button.hidden {
     display: none;
 }
+
 #close-button.hidden {
     display: none;
 }
@@ -358,12 +364,15 @@ font-size: 1.3rem;
     display: flex;
     align-items: center;
 }
-.logos ul li{
+
+.logos ul li {
     margin: 0 3rem;
 }
-.logos ul li img{
+
+.logos ul li img {
     width: 10rem;
 }
+
 #hero h2 {
     text-align: center;
     font-size: 1.3rem;
@@ -545,6 +554,7 @@ font-size: 1.3rem;
 }
 
 #services-buttons .left-button {
+    border: none;
     background: linear-gradient(87.43deg, #19599A 48.48%, rgba(63, 182, 211, 0.7) 84.38%);
     box-shadow: 0px 4px 4px 0px #FFFFFF33 inset;
     position: relative;
@@ -553,15 +563,18 @@ font-size: 1.3rem;
     align-items: center;
     border-radius: 0.8rem;
 
+}    
+#services-buttons .left-button:hover{
+    box-shadow: 0px 0 0.5rem 0px #ffffff66;
 }
 
-#services-buttons .blue-button::after {
+
+#services-buttons .left-button::after {
     content: "";
     position: absolute;
     height: 103%;
-    width: 103%;
+    width: 101%;
     border-radius: 0.8rem;
-    border: 1px solid transparent;
     background-image: linear-gradient(180deg, #090EDA 0%, #27AACD 100%);
     z-index: -1;
 }
@@ -593,7 +606,7 @@ font-size: 1.3rem;
     background-size: cover;
     backdrop-filter: blur(16px);
     position: relative;
-    
+
 }
 
 #refPlanet {
@@ -643,25 +656,23 @@ font-size: 1.3rem;
 .refrences-button::after {
     content: "";
     position: absolute;
-    height: 103%;
-    width: 102%;
+    height: 105%;
+    width: 101%;
     border-radius: 1rem;
     background-image: linear-gradient(90deg, #090EDA 0%, #27AACD 100%);
-    z-index: -1;
+    z-index: -2;
 }
 
 
 #projects-imgs {
     display: flex;
-    justify-content: center;
-    align-items: end;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
 #projects-imgs img {
     width: 20%;
-    /* 3 items per row */
-    height: auto;
+    height: min-content;
     cursor: pointer;
 }
 
@@ -1143,10 +1154,11 @@ footer {
         padding: 10rem 0 0 0;
     }
 
-    .logos ul li{
+    .logos ul li {
         margin: 0 1.5rem;
     }
-    .logos ul li img{
+
+    .logos ul li img {
         width: 8rem;
     }
 
@@ -1195,7 +1207,8 @@ footer {
         width: 95%;
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    #arrow-container{
+
+    #arrow-container {
         width: 90%;
         margin: 0 auto;
     }
