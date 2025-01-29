@@ -13,9 +13,11 @@ button {
     cursor: pointer;
     font-size: 0.9rem;
 }
-button:hover{
+
+button:hover {
     box-shadow: 0px 0px 1rem -0.2rem #9F64EF66;
 }
+
 body {
     width: 100%;
     background: url('./assests/background.svg') repeat;
@@ -562,8 +564,9 @@ header button::after {
     align-items: center;
     border-radius: 0.8rem;
 
-}    
-#services-buttons .left-button:hover{
+}
+
+#services-buttons .left-button:hover {
     box-shadow: 0px 0px 1rem -0.2rem #9F64EF66;
 }
 
@@ -664,15 +667,19 @@ header button::after {
 
 
 #projects-imgs {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
+    width: 100%;
+    columns: 5;
+    column-gap: 0.8rem;
+    transform: rotate(180deg); /* Flip container */
+    display: inline-block; /* Prevent layout breakage */
 }
 
 #projects-imgs img {
-    width: 20%;
-    height: min-content;
-    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    transform: rotate(180deg); /* Flip images back */
+    vertical-align: bottom; /* Remove white space under images */
 }
 
 #projects-imgs img:hover {
