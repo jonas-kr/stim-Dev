@@ -339,13 +339,8 @@ header button::after {
 }
 
 @keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 
 .logos {
@@ -353,17 +348,35 @@ header button::after {
     margin-top: 5rem;
     max-width: 100%;
     overflow: hidden;
-    white-space: nowrap;
+    position: relative;
+    /* Fade-out effect */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
 }
 
 .logos-slide {
     animation: 12s slide infinite linear;
+    display: flex;
 }
 
 .logos ul {
     list-style: none;
     display: flex;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .logos ul li {
@@ -372,6 +385,7 @@ header button::after {
 
 .logos ul li img {
     width: 10rem;
+    transition: opacity 0.3s; /* Optional: for smooth fading */
 }
 
 #hero h2 {
@@ -680,10 +694,11 @@ header button::after {
     margin-bottom: 0.8rem;
     transform: rotate(180deg); /* Flip images back */
     vertical-align: bottom; /* Remove white space under images */
+    cursor: pointer;
 }
 
 #projects-imgs img:hover {
-    scale: 105%;
+    scale: 102%;
 }
 
 #secondPart {
