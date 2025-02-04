@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+    font-size: 15px;
     scroll-behavior: smooth;
 }
 
@@ -340,8 +341,13 @@ header button::after {
 }
 
 @keyframes slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .logos {
@@ -351,20 +357,16 @@ header button::after {
     overflow: hidden;
     position: relative;
     /* Fade-out effect */
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-    );
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
 }
 
 .logos-slide {
@@ -386,7 +388,8 @@ header button::after {
 
 .logos ul li img {
     width: 10rem;
-    transition: opacity 0.3s; /* Optional: for smooth fading */
+    transition: opacity 0.3s;
+    /* Optional: for smooth fading */
 }
 
 #hero h2 {
@@ -685,16 +688,20 @@ header button::after {
     width: 100%;
     columns: 5;
     column-gap: 0.8rem;
-    transform: rotate(180deg); /* Flip container */
-    display: inline-block; /* Prevent layout breakage */
+    transform: rotate(180deg);
+    /* Flip container */
+    display: inline-block;
+    /* Prevent layout breakage */
 }
 
 #projects-imgs img {
     display: inline-block;
     width: 100%;
     margin-bottom: 0.8rem;
-    transform: rotate(180deg); /* Flip images back */
-    vertical-align: bottom; /* Remove white space under images */
+    transform: rotate(180deg);
+    /* Flip images back */
+    vertical-align: bottom;
+    /* Remove white space under images */
     cursor: pointer;
 }
 
@@ -747,6 +754,11 @@ header button::after {
     padding: 1.5rem 1rem 2rem 1rem;
     border-radius: 2rem;
     gap: 1.5rem;
+    cursor: pointer;
+}
+
+.request-card:hover {
+    scale: 103%;
 }
 
 .request-card p {
@@ -778,7 +790,7 @@ header button::after {
     margin-top: 3rem;
     border-radius: 1.5rem;
     position: relative;
-    
+
 }
 
 #arrow-container {
