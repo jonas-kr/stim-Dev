@@ -22,20 +22,18 @@ rightArrow.addEventListener('click', () => {
   reviewContainer.querySelector("p").textContent = desc
   const points = reviewContainer.querySelectorAll(".points img")
   points.forEach(p => p.src = "./assests/Frame 633.svg")
-  points[currentReview ].src = "./assests/Frame 632.svg"
+  points[currentReview].src = "./assests/Frame 632.svg"
 })
 
 leftArrow.addEventListener('click', () => {
   currentReview = (currentReview - 1) % 4
-  if (currentReview <0) currentReview = 3
-  console.log(currentReview);
-  
+  if (currentReview < 0) currentReview = 3
   const { name, desc } = reviews.find(r => r.id == currentReview)
   reviewContainer.querySelector("h3").textContent = name
   reviewContainer.querySelector("p").textContent = desc
   const points = reviewContainer.querySelectorAll(".points img")
   points.forEach(p => p.src = "./assests/Frame 633.svg")
-  points[currentReview ].src = "./assests/Frame 632.svg"
+  points[currentReview].src = "./assests/Frame 632.svg"
 })
 
 menuButton.addEventListener('click', () => {
