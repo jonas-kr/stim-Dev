@@ -739,7 +739,6 @@ header button::after {
     width: 85%;
     margin: 2rem auto;
     margin-bottom: 5rem;
-
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
@@ -1242,6 +1241,8 @@ footer {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+
+
     #arrow-container {
         width: 90%;
         margin: 0 auto;
@@ -1299,6 +1300,10 @@ footer {
         padding: 0.5rem;
     }
 
+    .request-card p{
+        font-size: 1.1rem;
+    }
+
     #left-card {
         top: 55%;
         right: 62%;
@@ -1311,6 +1316,9 @@ footer {
     #services-bar {
         padding: 0.2rem;
         gap: 0.1rem;
+    }
+    #services-bar span{
+font-size: 1rem;
     }
 
     #services-bar .blue-button {
