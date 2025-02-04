@@ -1275,6 +1275,9 @@ width: 1.8rem;
         width: 100%;
         text-align: center;
     }
+    #services-bar span{
+        font-size: .9rem;
+    }
 
     #services-container {
         flex-direction: column;
@@ -1340,6 +1343,16 @@ width: 1.8rem;
 
     #data-protection {
         padding: 4rem 1rem 5rem 1rem;
+    }
+    .slide-card {
+        margin: 0 0.2rem;
+        padding: 0.4rem 0.4rem 0.15rem 0.4rem;
+        background: linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
+        border-radius: 1rem;
+    }
+    #refrences-cards-container {
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -1408,6 +1421,11 @@ width: 1.8rem;
 
     #services-bar .blue-button {
         padding: 0.5rem 1rem;
+    }
+    #refrences-cards-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.5rem;
+
     }
 
     #top-footer nav {
