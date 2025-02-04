@@ -771,13 +771,13 @@ header button::after {
 
 #i-know-container {
     background: transparent linear-gradient(80.42deg, rgba(0, 0, 0, 0.16) 25.25%, rgba(83, 84, 108, 0.16) 98.05%);
-
     backdrop-filter: blur(36px);
     border: 1px solid #10113199;
     padding: 3rem 2rem;
     margin-top: 3rem;
     border-radius: 1.5rem;
     position: relative;
+    
 }
 
 #arrow-container {
