@@ -701,6 +701,7 @@ header button::after {
     flex-shrink: 0;
 }
 
+
 #projects-imgs img {
     display: inline-block;
     width: 100%;
@@ -1322,6 +1323,11 @@ width: 1.8rem;
         padding: 0.6rem 1.2rem;
     }
 
+    @-moz-document url-prefix() {
+        #projects-imgs {
+            margin-top: -8rem; /* Adjust negative margin */
+        }
+    }
     #refrences-line {
         width: 90%;
     }
