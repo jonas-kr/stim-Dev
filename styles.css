@@ -36,9 +36,9 @@ header {
     align-items: center;
     position: sticky;
     top: 1rem;
-    backdrop-filter: blur(34px);
-    border: 2px solid;
-    border-image-source: linear-gradient(266.19deg, rgba(16, 17, 49, 0.6) -4.37%, rgba(239, 239, 245, 0) 100.99%);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px); /* Safari support */
+    
     margin: 1rem 5vw 0 5vw;
     border: solid 1px #FFFFFF1A;
     border-radius: 0.8rem;
