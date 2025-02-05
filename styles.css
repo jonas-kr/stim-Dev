@@ -687,11 +687,13 @@ header button::after {
 #projects-imgs {
     width: 100%;
     columns: 5;
+    -webkit-column-count: 5; /* Safari column count */
+    column-count: 5; /* Standard property */
     column-gap: 0.8rem;
+    -webkit-column-gap: 0.8rem; /* Safari column gap */
     transform: rotate(180deg);
-    /* Flip container */
+    -webkit-transform: rotate(180deg); /* Safari transform */
     display: inline-block;
-    /* Prevent layout breakage */
 }
 
 #projects-imgs img {
@@ -699,10 +701,13 @@ header button::after {
     width: 100%;
     margin-bottom: 0.8rem;
     transform: rotate(180deg);
-    /* Flip images back */
+    -webkit-transform: rotate(180deg); /* Safari transform */
     vertical-align: bottom;
-    /* Remove white space under images */
     cursor: pointer;
+    /* Add these for better image rendering in Safari */
+    image-rendering: -webkit-optimize-contrast;
+    height: auto;
+    -webkit-backface-visibility: hidden; /* Prevent rendering glitches */
 }
 
 #projects-imgs img:hover {
