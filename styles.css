@@ -1433,12 +1433,11 @@ width: 1.8rem;
     }
 
     #services-bar .blue-button {
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.8rem;
     }
     #refrences-cards-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 0.5rem;
-
     }
 
     #top-footer nav {
