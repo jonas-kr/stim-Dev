@@ -683,6 +683,12 @@ header button::after {
     z-index: -2;
 }
 
+.rotate-wrapper {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    display: block;
+    width: 100%;
+}
 
 #projects-imgs {
     width: 100%;
@@ -691,9 +697,8 @@ header button::after {
     column-count: 5; /* Standard property */
     column-gap: 0.8rem;
     -webkit-column-gap: 0.8rem; /* Safari column gap */
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg); /* Safari transform */
     display: inline-block;
+    flex-shrink: 0;
 }
 
 #projects-imgs img {
