@@ -15,7 +15,7 @@
         <nav>
             <a href="">Startseite</a>
             <a href="">Dienstleistungen</a>
-            <a href="">Referenzen</a>
+            <a href="/references.html">Referenzen</a>
             <a href="">Erfahrungen</a>
         </nav>
         <div id="menu-container">
@@ -23,18 +23,20 @@
             <a href="">Dienstleistungen</a>
             <a href="">Referenzen</a>
             <a href="">Erfahrungen</a>
-            <button class="header-button">
+            <button id="header-button">
                 Projekt starten
                 <img src="./assests/rightArrow.svg" alt="arrow">
             </button>
         </div>
         <div>
-            <button class="header-button">
+            <button>
                 Projekt starten
                 <img src="./assests/rightArrow.svg" alt="arrow">
             </button>
         </div>
-        <img id="menu-button" src="./assests/Menu Button.png" alt="">
+        <img id="menu-button" src="./assests/Menu.png" alt="">
+        <img id="close-button" class="hidden" src="./assests/Close.png" alt="">
+
     </header>
 
     <section class="wrapper">
@@ -165,6 +167,22 @@
             </div>
         </footer>
     </section>
+    <script>
+        const menuButton = document.querySelector("#menu-button")
+        const closeButton = document.querySelector("#close-button")
+        const menuContainer = document.querySelector("#menu-container")
+        menuButton.addEventListener('click', () => {
+            menuButton.classList.add("hidden")
+            closeButton.classList.remove("hidden")
+            menuContainer.style.display = "flex"
+        })
+
+        closeButton.addEventListener('click', () => {
+            menuButton.classList.remove("hidden")
+            closeButton.classList.add("hidden")
+            menuContainer.style.display = "none"
+        })
+    </script>
 </body>
 
 </html>
