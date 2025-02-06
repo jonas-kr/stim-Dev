@@ -850,6 +850,17 @@ header button::after {
     position: relative;
 }
 
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 #profil-pic {
     position: absolute;
     top: 1.3rem;

@@ -44,29 +44,65 @@ services.forEach((service) => {
     services.forEach((s) => {
       s.classList.remove("blue-button")
     })
-    service.classList.add("blue-button")    
+    service.classList.add("blue-button")
   })
 })
 
 rightArrow.addEventListener('click', () => {
-  currentReview = (currentReview + 1) % 4
-  const { name, desc } = reviews.find(r => r.id == currentReview)
-  reviewContainer.querySelector("h3").textContent = name
-  reviewContainer.querySelector("p").textContent = desc
-  const points = reviewContainer.querySelectorAll(".points img")
-  points.forEach(p => p.src = "./assests/Frame 633.svg")
-  points[currentReview].src = "./assests/Frame 632.svg"
-})
+  const reviewText = reviewContainer.querySelector("h3");
+  const reviewDesc = reviewContainer.querySelector("p");
+
+  // Add fade-out class
+  reviewText.classList.add("fade-out");
+  reviewDesc.classList.add("fade-out");
+
+  setTimeout(() => {
+    currentReview = (currentReview + 1) % 4;
+    const { name, desc } = reviews.find(r => r.id == currentReview);
+    reviewText.textContent = name;
+    reviewDesc.textContent = desc;
+
+    // Update points
+    const points = reviewContainer.querySelectorAll(".points img");
+    points.forEach(p => p.src = "./assests/Frame 633.svg");
+    points[currentReview].src = "./assests/Frame 632.svg";
+
+    // Remove fade-out and add fade-in
+    reviewText.classList.remove("fade-out");
+    reviewDesc.classList.remove("fade-out");
+    reviewText.classList.add("fade-in");
+    reviewDesc.classList.add("fade-in");
+  }, 300); // Delay should match CSS animation duration
+});
+
 
 leftArrow.addEventListener('click', () => {
-  currentReview = (currentReview - 1) % 4
-  if (currentReview < 0) currentReview = 3
-  const { name, desc } = reviews.find(r => r.id == currentReview)
-  reviewContainer.querySelector("h3").textContent = name
-  reviewContainer.querySelector("p").textContent = desc
-  const points = reviewContainer.querySelectorAll(".points img")
-  points.forEach(p => p.src = "./assests/Frame 633.svg")
-  points[currentReview].src = "./assests/Frame 632.svg"
-})
+  const reviewText = reviewContainer.querySelector("h3");
+  const reviewDesc = reviewContainer.querySelector("p");
+
+  // Add fade-out effect
+  reviewText.classList.add("fade-out");
+  reviewDesc.classList.add("fade-out");
+
+  setTimeout(() => {
+    currentReview = (currentReview - 1) % 4;
+    if (currentReview < 0) currentReview = 3;
+
+    const { name, desc } = reviews.find(r => r.id == currentReview);
+    reviewText.textContent = name;
+    reviewDesc.textContent = desc;
+
+    // Update points
+    const points = reviewContainer.querySelectorAll(".points img");
+    points.forEach(p => p.src = "./assests/Frame 633.svg");
+    points[currentReview].src = "./assests/Frame 632.svg";
+
+    // Remove fade-out and add fade-in
+    reviewText.classList.remove("fade-out");
+    reviewDesc.classList.remove("fade-out");
+    reviewText.classList.add("fade-in");
+    reviewDesc.classList.add("fade-in");
+  }, 300); // Delay should match CSS transition duration
+});
 
 
