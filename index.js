@@ -24,6 +24,29 @@ const leftArrow = document.querySelector("#left-arrow")
 const reviewContainer = document.querySelector("#i-know-content")
 let currentReview = 0
 
+console.log(services);
+
+
+menuButton.addEventListener('click', () => {
+  menuButton.classList.add("hidden")
+  closeButton.classList.remove("hidden")
+  menuContainer.style.display = "flex"
+})
+
+closeButton.addEventListener('click', () => {
+  menuButton.classList.remove("hidden")
+  closeButton.classList.add("hidden")
+  menuContainer.style.display = "none"
+})
+
+services.forEach((service) => {
+  service.addEventListener("click", () => {
+    services.forEach((s) => {
+      s.classList.remove("blue-button")
+    })
+    service.classList.add("blue-button")    
+  })
+})
 
 rightArrow.addEventListener('click', () => {
   currentReview = (currentReview + 1) % 4
@@ -46,24 +69,4 @@ leftArrow.addEventListener('click', () => {
   points[currentReview].src = "./assests/Frame 632.svg"
 })
 
-menuButton.addEventListener('click', () => {
-  menuButton.classList.add("hidden")
-  closeButton.classList.remove("hidden")
-  menuContainer.style.display = "flex"
-})
-
-closeButton.addEventListener('click', () => {
-  menuButton.classList.remove("hidden")
-  closeButton.classList.add("hidden")
-  menuContainer.style.display = "none"
-})
-
-services.forEach((service) => {
-  service.addEventListener("click", () => {
-    services.forEach((s) => {
-      s.classList.remove("blue-button")
-    })
-    service.classList.add("blue-button")
-  })
-})
 
