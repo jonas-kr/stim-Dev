@@ -48,13 +48,6 @@ services.forEach((service) => {
   })
 })
 
-setTimeout(() => {
-  const projectsImgs = document.getElementById('projects-imgs');
-  projectsImgs.style.display = 'none';
-  void projectsImgs.offsetHeight; // Trigger reflow
-  projectsImgs.style.display = 'block';
-}, 100);
-
 rightArrow.addEventListener('click', () => {
   const reviewText = reviewContainer.querySelector("h3");
   const reviewDesc = reviewContainer.querySelector("p");

@@ -716,7 +716,6 @@ header button::after {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     vertical-align: bottom;
-    cursor: pointer;
     image-rendering: -webkit-optimize-contrast;
     height: auto;
     will-change: transform;

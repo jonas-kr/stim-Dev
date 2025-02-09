@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        setTimeout(() => {
+            const projectsImgs = document.getElementById('projects-imgs');
+            projectsImgs.style.display = 'none';
+            void projectsImgs.offsetHeight; // Trigger reflow
+            projectsImgs.style.display = 'block';
+        }, 100);
+    </script>
     <title>Home</title>
 </head>
 
@@ -265,7 +273,8 @@
                     <div id="i-know-content">
                         <img id="profil-pic" src="./assests/Pic.png" alt="">
                         <h3 class="fade-in">Carl Barenger</h3>
-                        <p class="fade-in">I had an amazing experience working with Stimm.Dev. Their team went above and beyond to
+                        <p class="fade-in">I had an amazing experience working with Stimm.Dev. Their team went above and
+                            beyond to
                             deliver
                             exceptional results for our project. From the initial consultation to the final product,
                             they
