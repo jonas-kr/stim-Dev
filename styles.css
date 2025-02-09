@@ -692,33 +692,10 @@ header button::after {
     width: 100%;
 }
 
-#projects-imgs {
-    width: 100%;
-    display: grid;
-    grid-template-columns:repeat(5,minmax(0,1fr));
-    grid-template-rows: masonry; 
-}
-
-
-#projects-imgs img {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 0.8rem;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    /* Safari transform */
-    vertical-align: bottom;
-    cursor: pointer;
-    /* Add these for better image rendering in Safari */
-    image-rendering: -webkit-optimize-contrast;
-    height: auto;
-    -webkit-backface-visibility: hidden;
-    /* Prevent rendering glitches */
-}
 
 #projects-imgs {
     width: 100%;
-    column-count: 5;
+    columns: 5;
     -webkit-column-count: 5;
     /* Safari column count */
     column-count: 5;
@@ -736,17 +713,18 @@ header button::after {
     display: inline-block;
     width: 100%;
     margin-bottom: 0.8rem;
-
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
     vertical-align: bottom;
     cursor: pointer;
+    image-rendering: -webkit-optimize-contrast;
     height: auto;
     will-change: transform;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    transition: transform 0.3s ease-in-out;
 }
 
-#projects-imgs img:hover {
-    transform: rotate(180deg) scale(1.0);
-    -webkit-transform: rotate(180deg) scale(1.02);
-}
 
 
 #secondPart {
