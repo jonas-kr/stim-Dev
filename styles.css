@@ -694,17 +694,9 @@ header button::after {
 
 #projects-imgs {
     width: 100%;
-    columns: 5;
-    -webkit-column-count: 5;
-    /* Safari column count */
-    column-count: 5;
-    /* Standard property */
-    column-gap: 0.8rem;
-    -webkit-column-gap: 0.8rem;
-    /* Safari column gap */
-    display: block;
-    flex-shrink: 0;
-    transform: none !important;
+    display: grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    grid-template-rows: masonry; 
 }
 
 
@@ -728,29 +720,33 @@ header button::after {
     width: 100%;
     column-count: 5;
     -webkit-column-count: 5;
+    /* Safari column count */
+    column-count: 5;
+    /* Standard property */
     column-gap: 0.8rem;
+    -webkit-column-gap: 0.8rem;
+    /* Safari column gap */
     display: block;
+    flex-shrink: 0;
+    transform: none !important;
 }
 
-.img-wrapper {
-    break-inside: avoid; /* Prevents column break issues */
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-}
 
 #projects-imgs img {
+    display: inline-block;
     width: 100%;
-    display: block; /* Helps with column alignment */
     margin-bottom: 0.8rem;
-    transform: rotate(180deg);
+
+    vertical-align: bottom;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    height: auto;
+    will-change: transform;
 }
 
 #projects-imgs img:hover {
-    transform: rotate(180deg) scale(1.02);
+    transform: rotate(180deg) scale(1.0);
+    -webkit-transform: rotate(180deg) scale(1.02);
 }
-
 
 
 #secondPart {
