@@ -725,6 +725,10 @@ header button::after {
     transition: transform 0.3s ease-in-out;
 }
 
+#projects-imgs img:hover {
+    transform: rotate(180deg) scale(1.02);
+    -webkit-transform: rotate(180deg) scale(1.02);
+}
 
 
 #secondPart {
