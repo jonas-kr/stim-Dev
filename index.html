@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script>
-        setTimeout(() => {
-            const projectsImgs = document.getElementById('projects-imgs');
-            projectsImgs.style.display = 'none';
-            void projectsImgs.offsetHeight; // Trigger reflow
-            projectsImgs.style.display = 'block';
-        }, 100);
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                const masonry = document.getElementById("projects-imgs");
+                if (masonry) {
+                    masonry.style.display = "none";
+                    void masonry.offsetHeight; // Force reflow
+                    masonry.style.display = "block";
+                }
+            }, 100);
+        });
+
     </script>
     <title>Home</title>
 </head>

@@ -724,6 +724,45 @@ header button::after {
     transition: transform 0.3s ease-in-out;
 }
 
+
+.rotate-wrapper {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    display: block;
+    width: 100%;
+}
+
+#projects-imgs {
+    width: 100%;
+    columns: 5;
+    -webkit-column-count: 5; /* Safari */
+    column-count: 5;
+    column-gap: 0.8rem;
+    -webkit-column-gap: 0.8rem; /* Safari */
+    display: block;
+    flex-shrink: 0;
+    transform: none !important;
+}
+
+#projects-imgs img {
+    display: block; /* Fix Safari breaking inline-block */
+    width: 100%;
+    margin-bottom: 0.8rem;
+    vertical-align: bottom;
+    image-rendering: -webkit-optimize-contrast;
+    height: auto;
+    will-change: transform;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    transition: transform 0.3s ease-in-out;
+    /* Prevent Safari from breaking masonry */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+
 #secondPart {
     padding: 8rem 5vw 0 5vw;
     z-index: -1;
