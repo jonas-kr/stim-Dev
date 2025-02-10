@@ -696,7 +696,15 @@ header button::after {
 #projects-imgs {
     width: 100%;
     columns: 5;
+    -webkit-columns: 5;
     column-gap: 0.8rem;
+    column-fill: balance;
+}
+
+
+#projects-imgs div {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
 }
 
 
@@ -706,7 +714,10 @@ header button::after {
     -webkit-transform: rotate(180deg);
     margin-bottom: 0.8rem;
     break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-before: avoid-column;
 }
+
 
 #secondPart {
     padding: 8rem 5vw 0 5vw;
