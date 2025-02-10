@@ -4,17 +4,7 @@ const reviews = [{ id: 0, name: "Carl Barenger", desc: "I had an amazing experie
 { id: 3, name: "youyou", desc: "I had an ad beyond to deliver exceptional results for our project. From the initial consultation to the final product, they were professional, attentive to detail, and always responsive to our feedback. What impressed me the most was their ability to understand our unique needs and translate them into a visually stunning and user-friendly design." }
 ]
 
-/* const titles = [
-  { id: 1, title: "first title" },
-  { id: 2, title: "second title" },
-  { id: 3, title: "third title" }
-]
 
-const descs = [{ id: 1, desc: "first paragraph" },
-{ id: 2, desc: "second paragaraph" },
-{ id: 3, desc: "third paragraph" }
-]
- */
 const services = document.querySelectorAll("#services-bar span")
 const menuButton = document.querySelector("#menu-button")
 const closeButton = document.querySelector("#close-button")
@@ -24,7 +14,6 @@ const leftArrow = document.querySelector("#left-arrow")
 const reviewContainer = document.querySelector("#i-know-content")
 let currentReview = 0
 
-console.log(services);
 
 
 menuButton.addEventListener('click', () => {
@@ -47,6 +36,7 @@ services.forEach((service) => {
     service.classList.add("blue-button")
   })
 })
+
 
 rightArrow.addEventListener('click', () => {
   const reviewText = reviewContainer.querySelector("h3");
