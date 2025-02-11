@@ -703,6 +703,9 @@ header button::after {
     transform: rotate(180deg);
     padding: 6px;
 }
+.grid-item:hover{
+    transform: rotate(180deg) scale(1.02);
+}
 
 .grid-item img {
     width: 100%;
