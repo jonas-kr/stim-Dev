@@ -690,7 +690,6 @@ header button::after {
     -webkit-transform: rotate(180deg);
     display: block;
     width: 100%;
-
 }
 
 .grid {
@@ -703,7 +702,8 @@ header button::after {
     transform: rotate(180deg);
     padding: 6px;
 }
-.grid-item:hover{
+
+.grid-item:hover {
     transform: rotate(180deg) scale(1.02);
 }
 
@@ -1349,9 +1349,11 @@ footer {
     #services-right img {
         width: 80%;
     }
+
     .grid-item {
         padding: 3px;
     }
+
     .service {
         justify-content: center;
     }
@@ -1466,9 +1468,11 @@ footer {
     #projects-imgs img {
         margin-bottom: 0.4rem;
     }
+
     .grid-item {
         padding: 2px;
     }
+
     #services-bar {
         row-gap: 1rem;
     }

@@ -4,14 +4,30 @@ const reviews = [{ id: 0, name: "Carl Barenger", desc: "I had an amazing experie
 { id: 3, name: "youyou", desc: "I had an ad beyond to deliver exceptional results for our project. From the initial consultation to the final product, they were professional, attentive to detail, and always responsive to our feedback. What impressed me the most was their ability to understand our unique needs and translate them into a visually stunning and user-friendly design." }
 ]
 
+const serv = [{
+  id: 0, h3: "Innovative hybride App-Lösungen, zugeschnitten aufDein Business",
+  p: "Wir sind spezialisiert auf plattformübergreifende App-Entwicklung,um deine App einer breiten Zielgruppe anbieten zu können.Darunter sind: iOS, Android, Web, Linux und macOS.",
+  h4: "Unsere Entwicklungstechnologien:", tech: [{ p: "Flutter", img: "./assests/flutter.svg" }], img: "./assests/servicesPhone.svg"
+},
+{
+  id: 1, h3: "Innovative zugeschnitten aufDein Business",
+  p: "um deine App einer breiten Zielgruppe anbieten zu können.Darunter sind: iOS, Android, Web, Linux und macOS.",
+  h4: "Unsere Entwicklungstechnologien:", tech: [{ p: "Flutter", img: "./assests/flutter.svg" }], img: "./assests/phone.png"
+}]
+
+
 const services = document.querySelectorAll("#services-bar span")
+const nodeArray = Array.from(services);
 const menuButton = document.querySelector("#menu-button")
 const closeButton = document.querySelector("#close-button")
 const menuContainer = document.querySelector("#menu-container")
 const rightArrow = document.querySelector("#right-arrow")
 const leftArrow = document.querySelector("#left-arrow")
 const reviewContainer = document.querySelector("#i-know-content")
+const serivcesLeft = document.querySelector("#services-left")
+const servicesRight = document.querySelector("#services-right")
 let currentReview = 0
+let index = 0
 
 
 menuButton.addEventListener('click', () => {
@@ -28,6 +44,14 @@ closeButton.addEventListener('click', () => {
 
 services.forEach((service) => {
   service.addEventListener("click", () => {
+    index = nodeArray.indexOf(service);
+    const { h3, h4, p, img } = serv.find(r => r.id == index);
+
+    serivcesLeft.querySelector("h3").textContent = h3
+    serivcesLeft.querySelector("h4").textContent = h4
+    serivcesLeft.querySelector("p").textContent = p
+    servicesRight.querySelector("img").src = img
+
     services.forEach((s) => {
       s.classList.remove("blue-button")
     })
