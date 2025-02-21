@@ -7,12 +7,17 @@ const reviews = [{ id: 0, name: "Carl Barenger", desc: "I had an amazing experie
 const serv = [{
   id: 0, h3: "Innovative hybride App-Lösungen, zugeschnitten aufDein Business",
   p: "Wir sind spezialisiert auf plattformübergreifende App-Entwicklung,um deine App einer breiten Zielgruppe anbieten zu können.Darunter sind: iOS, Android, Web, Linux und macOS.",
-  h4: "Unsere Entwicklungstechnologien:", tech: [{ p: "Flutter", img: "./assests/flutter.svg" }], img: "./assests/servicesPhone.svg"
+  h4: "Unsere Entwicklungstechnologien:", img: "./assests/servicesPhone.svg"
 },
 {
   id: 1, h3: "Innovative zugeschnitten aufDein Business",
   p: "um deine App einer breiten Zielgruppe anbieten zu können.Darunter sind: iOS, Android, Web, Linux und macOS.",
-  h4: "Unsere Entwicklungstechnologien:", tech: [{ p: "Flutter", img: "./assests/flutter.svg" }], img: "./assests/phone.png"
+  h4: "Unsere Entwicklungstechnologien:", img: "./assests/phone.png"
+},
+{
+  id: 2, h3: "Innovative zugeschnitten aufDein Business",
+  p: "um deine App einer breiten Zielgruppe anbieten zu können.Darunter sind: iOS, Android, Web, Linux und macOS.",
+  h4: "Unsere Entwicklungstechnologien:", img: "./assests/phone.png"
 }]
 
 
