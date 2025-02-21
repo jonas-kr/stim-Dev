@@ -64,7 +64,6 @@ services.forEach((service) => {
   })
 })
 
-
 rightArrow.addEventListener('click', () => {
   const reviewText = reviewContainer.querySelector("h3");
   const reviewDesc = reviewContainer.querySelector("p");
